@@ -25,6 +25,7 @@ export class ChatbotController {
         this.#chatbotView.renderWelcomeBubble();
         this.#chatbotView.setInputEnabled(true);
         this.#chatbotView.appendBotMessage(firstBotMessage, null, false);
+        return this.#promptService.init(text);
     }
 
     #setupEvents() {
