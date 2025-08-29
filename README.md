@@ -24,29 +24,6 @@ O objetivo é fornecer uma experiência de conversação inteligente sem a neces
 
 ---
 
-## 📂 Estrutura do Projeto
-
-_TEMPLATE/
-│── botData/
-│ ├── avatar.webp # Avatar do chatbot
-│ ├── chatbot-config.json # Configuração do bot
-│ ├── systemPrompt.txt # Prompt inicial do sistema
-│
-│── src/
-│ ├── controllers/
-│ │ └── chatBotController.js # Controlador principal do bot
-│ ├── services/
-│ │ └── promptService.js # Serviço de manipulação de prompts
-│ ├── views/
-│ │ └── index.js # Lógica de inicialização do chatbot
-│
-│── sdk/ # SDK de integração
-│── ew-chatbot.css # Estilos do chatbot
-│── ew-chatbot.html # Estrutura HTML do chatbot
-│── index.html # Página inicial
-│── llms.txt # Configurações de LLMs
-│── package.json # Dependências do projeto
-
 ## 🚀 Recursos Principais
 
 - 100% offline (sem chamadas para servidores – ideal para protótipos e privacidade).
