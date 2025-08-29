@@ -53,7 +53,7 @@ export class ChatbotController {
     async #onOpen() {
         const errors = this.#checkRequirements();
         if (errors.length){
-            const messages = errors.join('\n')
+            const messages = errors.join('\n\n')
             
             this.#chatbotView.appendBotMessage(
                 messages
