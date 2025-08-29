@@ -43,11 +43,15 @@ export class ChatbotController {
         console.log('received', userMsg)
         this.#chatbotView.showTypingIndicator();
         this.#chatbotView.setInputEnabled(false);
-        setTimeout(() => {
-            this.#chatbotView.appendBotMessage("Opa! Esse serviço usa API's em fases de testes e desenvolvimento e só funciona no navegador Chrome, na sua versão Desktop e requer configuração específica para tal. Verifique no README do projeto orientações sobre a configuração e disponibilidade da API no seu navegador.", null, false);
-            this.#chatbotView.setInputEnabled(true);
-            this.#chatbotView.hideTypingIndicator();
-        }, 500);
+        
+        const response = await this.#promptService.prompt(userMsg);
+        console.log('response', response)
+
+       
+        this.#chatbotView.appendBotMessage(response);
+        this.#chatbotView.setInputEnabled(true);
+        this.#chatbotView.hideTypingIndicator();
+  
 
     }
 
