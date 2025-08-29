@@ -54,9 +54,11 @@ export class ChatbotController {
         const errors = this.#checkRequirements();
         if (errors.length){
             const messages = errors.join('\n')
-            errors.forEach (
-                msg => this.#chatbotView.appendBotMessage(msg)
-            ) 
+            
+            this.#chatbotView.appendBotMessage(
+                messages
+            )
+             
             
             this.#chatbotView.setInputEnabled(false);
             return
