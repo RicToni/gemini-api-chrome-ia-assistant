@@ -29,6 +29,6 @@ export class PromptService {
 
         })
 
-        return this.#session.prompt(this.#messages);
+        return this.#session.promptStreaming(this.#messages);
     }
 }
